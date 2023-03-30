@@ -1,7 +1,33 @@
+:root{
+    --main-color: #970000;
+}
+
+/*tipografia*/
+body{
+    font-family: "Helvetica Neue",Helvetica;
+    line-height: 1.1rem;
+}
+h1{
+    font-size:1.5rem;
+    line-height: 1.5rem;
+}
+h2{
+    font-size:1.2rem
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+
+
+
 .quadrato{
     width: 100px;
     height: 100px;
-    background-color: red;
+    background-color: var(--main-color);
 }
 
 #q2{
@@ -9,7 +35,7 @@
 }
 
 #q3{
-    background-color:red;
+    background-color:var(--main-color);
     max-width: 600px;
     height: 50px;
 }
