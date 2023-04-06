@@ -38,6 +38,23 @@
 
         }, 30);
 
+
+        let c = 0;
+        let parole = ['Benvenuto','nel mio', 'sito'];
+        let title = document.getElementsByTagName('title')[0];
+
+        setInterval(function(){
+
+            title.textContent = parole[c];
+            if(c == parole.length -1){
+                c = 0;
+            }else{
+                c++;
+            }
+
+
+        }, 2000);
+
     </script>
 
 </body>
