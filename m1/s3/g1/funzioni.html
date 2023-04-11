@@ -23,7 +23,7 @@
         console.log(prova());//undefined
 
         //return
-
+        //ATTENZIONE: return termina la funzione
         function provaReturn(){
             return 'Dato restituito';
         }
@@ -90,16 +90,16 @@
             return risultato;
         }
 
-        let risultato5 = sommaPro(4,8,90);//tutti i valori verranno messi nell'array numeri
+        let risultato5 = sommaPro(4,8,90,7,9,5,4);//tutti i valori verranno messi nell'array numeri
         console.log('il risultato n°5 è pari a ' + risultato5);
 
-        let arrNumeri = [4,8,90];
+        let arrNumeri = [4,8,90,7,9,5,4];
         let risultato6 = arrNumeri.reduce(function(p,c){
             return p + c;
         })
         console.log(risultato6);
 
-        
+
         
 
 
