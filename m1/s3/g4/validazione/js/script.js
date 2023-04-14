@@ -20,27 +20,54 @@ myFormButton.addEventListener('click', function(e){
     let valid = true;
 
     if(nome.value == ''){
-        console.log('il campo nome è vuoto');
+        nome.style.outline = '1px solid red';
+        nome.nextElementSibling.textContent = `Devi inserire il ${nome.placeholder}`
         valid = false;
+    }else{
+        nome.style.outline = '';
+        nome.nextElementSibling.textContent = ``
     }
-
+    
     if(cognome.value == ''){
-        console.log('il campo cognome è vuoto');
+        cognome.style.outline = '1px solid red';
+        cognome.nextElementSibling.textContent = `Devi inserire il ${cognome.placeholder}`
         valid = false;
+    }else{
+        cognome.style.outline = '';
+        cognome.nextElementSibling.textContent = ``
     }
-
+    
     if(email.value == ''){
-        console.log('il campo mail è vuoto');
+        email.style.outline = '1px solid red';
+        email.nextElementSibling.textContent = `Devi inserire l'${email.placeholder}`
         valid = false;
+    }else{
+        email.style.outline = '';
+        email.nextElementSibling.textContent = ``
     }
     
     if(password.value == ''){
-        console.log('il campo password è vuoto');
+        password.style.outline = '1px solid red';
+        password.nextElementSibling.textContent = `Devi inserire la ${password.placeholder}`
         valid = false;
+    }else{
+        password.style.outline = '';
+        password.nextElementSibling.textContent = ``
     }
 
     if(valid){
         //codice che invia i dati al server
         console.log('inviato');
     }
+})
+
+
+//mostra nascondi password
+let onOff =  document.querySelector('.onOff');
+
+onOff.addEventListener('click', function(){
+
+    let password = document.querySelector('input.showHide');
+    password.type = (password.type == 'password') ? 'text' : 'password';
+
 })
