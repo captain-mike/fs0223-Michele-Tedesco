@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <template>
+
+    <div>
+        <h3>Titolo</h3>
+        <table>
+            <caption>Tabella d'esempio</caption>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+            <tr>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+                <td>dato</td>
+            </tr>
+        </table>
+    </div>
+
+    </template>
+
+    <div id="target"></div>
+
+    <script>
+
+        //seleziono il template che ho fatto in html
+        var temp = document.getElementsByTagName("template")[0];
+
+        //clono il contenuto, generando ogni volta un nuovo clone
+        let clone = temp.content.cloneNode(true);//crea una copia comprensiva di figli
+
+        //cerco elementi all'interno del clone, e li modifico come voglio
+        clone.querySelector('h3').textContent = 'Nuovo titolo';
+
+        
+        //definisco un'area in cui inserire il clone
+        let target = document.getElementById("target");
+        
+        //inserisco il clone
+        target.append(clone)
+        
+
+    </script>
+
+</body>
+</html>

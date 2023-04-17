@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+
+
+
+        //modalità 1
+        fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy')
+        .then(res => res.json())
+        .then(res => {
+            
+            domande = res.results;
+            
+            //inizio a costruire il dom
+            
+        })
+        
+        
+        //modalità 2
+        /* potete anche lavorare così */
+        async function prendiDomande(){
+            let domande = await fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy').then(res => res.json());
+            
+            //inizio a costruire il dom
+        }
+
+
+        prendiDomande();
+
+      
+
+    </script>
+</body>
+</html>
