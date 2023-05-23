@@ -28,7 +28,7 @@ class PizzaSpeciale extends Pizza{
     protected altezzaCornicione:number;
 
     constructor(_gusto:string, _prezzo:number, _altezzaCornicione:number){
-        super('_gusto', _prezzo);
+        super(_gusto, _prezzo);
         this.altezzaCornicione = _altezzaCornicione;
     }
 
