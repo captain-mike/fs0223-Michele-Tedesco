@@ -35,3 +35,4 @@ fs0223.aggiungiStudente(studente4);
 fs0223.aggiungiStudente(studente5);
 console.log(fs0223.getStudenti);
 console.log(fs0223.getStudenti[0].presentazione);
+//# sourceMappingURL=aggregation-ab.js.map

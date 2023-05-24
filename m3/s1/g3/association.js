@@ -20,3 +20,4 @@ let fattura = new Invoice(utente, '1/2023', 1000);
 console.log(fattura);
 console.log(fattura.intestatario.getName);
 //fattura.intestatario.getName = 'Mirko'; getName è un metodo getter(get) quindi non posso andare in assegnazione
+//# sourceMappingURL=association.js.map
