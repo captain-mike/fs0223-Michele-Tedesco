@@ -14,11 +14,11 @@ let margherita = new Pizza('Margherita', 5);
 console.log(margherita.informazioni());
 class PizzaSpeciale extends Pizza {
     constructor(_gusto, _prezzo, _altezzaCornicione) {
-        super('_gusto', _prezzo);
+        super(_gusto, _prezzo);
         this.altezzaCornicione = _altezzaCornicione;
     }
     mostraFormati() {
-        console.log(this.formati); //errore poiché la prop formati è private ed appartiene alla superclasse
+        //console.log(this.formati)//errore poiché la prop formati è private ed appartiene alla superclasse
     }
     informazioni() {
         let datoSuperClasse = super.informazioni();

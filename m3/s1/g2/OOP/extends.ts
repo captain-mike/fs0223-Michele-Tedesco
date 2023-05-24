@@ -33,7 +33,7 @@ class PizzaSpeciale extends Pizza{
     }
 
     mostraFormati(){
-        console.log(this.formati)//errore poiché la prop formati è private ed appartiene alla superclasse
+        //console.log(this.formati)//errore poiché la prop formati è private ed appartiene alla superclasse
     }
 
     public informazioni(): string {
