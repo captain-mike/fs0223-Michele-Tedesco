@@ -12,9 +12,9 @@ class Todo{
     }
 }
 
-let x = fetch('https://jsonplaceholder.typicode.com/todos/')
+fetch('https://jsonplaceholder.typicode.com/todos/')
 .then((res:Response) => res.json())
-.then((res:Promise<Todo>) => {
+.then((res:Todo[]) => {
 
     console.log(res[0].title);
     
