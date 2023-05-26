@@ -17,12 +17,12 @@ fetch('https://jsonplaceholder.typicode.com/todos/')
 .then((res:Todo[]) => {
 
     console.log(res[0].title);
-    
+
 
 })
 
 async  function Call(){
-    let dati:Promise<Todo> = await fetch('https://jsonplaceholder.typicode.com/todos/').then((res:Response) => res.json())
+    let dati:Todo[] = await fetch('https://jsonplaceholder.typicode.com/todos/').then((res:Response) => res.json())
 
     console.log(dati);
     
