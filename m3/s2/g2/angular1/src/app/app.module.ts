@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { PropComponent } from './prop/prop.component';
 import { AttrComponent } from './attr/attr.component';
 import { StyleClassComponent } from './style-class/style-class.component';
+import { FormComponent } from './form/form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     PropComponent,
     AttrComponent,
-    StyleClassComponent
+    StyleClassComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
