@@ -31,6 +31,11 @@ export class MenuComponent {
     }
   ];
 
+  removePizza(gusto:string){
+    //prendi tutte le pizze me le filtri e mi elimini solo il gusto su cui ho cliccato
+    this.menuGenitore = this.menuGenitore.filter(p => p.gusto != gusto )
+  }
+
 
 
 }

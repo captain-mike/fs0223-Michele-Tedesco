@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'componenti';
+
+  //fa come getElementById()
+  //cerca un elemento con la local variable #elemento e lo inserisce nella prop elementoCercato
+  @ViewChild('elemento') elementoCercato!:ElementRef;
+
+  ngAfterViewInit() {
+
+    console.log(this.elementoCercato.nativeElement.textContent);
+    this.pippo()
+
+  }
+
+
+  pippo(){
+
+  }
 }
