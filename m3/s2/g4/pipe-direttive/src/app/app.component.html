@@ -13,3 +13,17 @@
 <div *ngNotIf="display">
   falso
 </div>
+
+<hr>
+
+{{pizza | json}}
+
+<br>
+{{pizza.prezzo | currency : 'EUR' : 'symbol'}}
+<br>
+{{oggi | date}}
+<br>
+
+{{oggi | date : 'dd/MM/Y'}}
+<br>
+{{testo | cut}}

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ColoraDirective } from './directives/colora.directive';
 import { EventoDirective } from './directives/evento.directive';
 import { NgNotIfDirective } from './directives/ng-not-if.directive';
+import { CutPipe } from './cut.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColoraDirective,
     EventoDirective,
-    NgNotIfDirective
+    NgNotIfDirective,
+    CutPipe
   ],
   imports: [
     BrowserModule,
