@@ -1,14 +1,9 @@
 {
   "pizze": [
     {
-      "id": 1,
-      "gusto": "Margherita",
-      "prezzo": 8
-    },
-    {
-      "gusto": "Et eiusmod id expedi",
-      "prezzo": 7,
-      "id": 2
+      "gusto": "Anim dolores officia",
+      "prezzo": 42,
+      "id": 1
     }
   ]
 }

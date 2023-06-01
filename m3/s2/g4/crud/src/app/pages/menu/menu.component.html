@@ -1,4 +1,6 @@
 
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="pizze.length == 0 && !loading">Non ci sono pizze</div>
 
 <table class="table">
   <tr *ngFor="let pizza of pizze">

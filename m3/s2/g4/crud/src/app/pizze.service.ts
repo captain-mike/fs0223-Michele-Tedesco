@@ -8,11 +8,25 @@ export class PizzeService {
 
   apiUrl:string = 'http://localhost:3000/pizze';
 
+  allPizze:IPizza[] = [];
+
+
   constructor() { }
 
   getPizze():Promise<IPizza[]>{
     return fetch(this.apiUrl).then(response => response.json());
   }
+  //versione con promise
+  getPizzePromise(){
+
+    return new Promise<IPizza[]>((resolve) =>{
+      setTimeout(() => {
+        resolve(this.allPizze);
+      },2000)
+    })
+
+  }
+
 
   getPizzaSingola(id:number):Promise<IPizza>{
     return fetch(this.apiUrl+'/'+id).then(response => response.json());

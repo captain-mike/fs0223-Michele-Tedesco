@@ -10,6 +10,7 @@ import { PizzeService } from 'src/app/pizze.service';
 export class MenuComponent implements OnInit {
 
   pizze:IPizza[] = [];
+  loading:boolean = true;
 
   constructor(private pizzeSvc:PizzeService){}
 
@@ -35,6 +36,7 @@ export class MenuComponent implements OnInit {
   getPizze(){
     this.pizzeSvc.getPizze().then(pizzeResponse =>{
       this.pizze = pizzeResponse;
+      this.loading = false;
     })
   }
 
