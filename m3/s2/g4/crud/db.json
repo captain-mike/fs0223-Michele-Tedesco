@@ -3,12 +3,12 @@
     {
       "id": 1,
       "gusto": "Margherita",
-      "prezzo": 5
+      "prezzo": 8
     },
     {
-      "gusto": "diavola",
-      "prezzo": 1,
-      "id": 3
+      "gusto": "Et eiusmod id expedi",
+      "prezzo": 7,
+      "id": 2
     }
   ]
 }

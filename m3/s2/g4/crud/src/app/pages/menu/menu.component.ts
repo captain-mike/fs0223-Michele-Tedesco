@@ -15,10 +15,27 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(){
 
+    this.getPizze();
+
+  }
+
+
+  delete(id?:number){
+
+    this.pizzeSvc.deletePizza(id)
+    .then(res => {
+
+
+      console.log('pizza Eliminata');
+      this.getPizze();
+
+    })
+  }
+
+  getPizze(){
     this.pizzeSvc.getPizze().then(pizzeResponse =>{
       this.pizze = pizzeResponse;
     })
-
   }
 
 }

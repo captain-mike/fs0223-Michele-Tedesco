@@ -14,12 +14,30 @@ export class PizzeService {
     return fetch(this.apiUrl).then(response => response.json());
   }
 
-  addPizza(pizza:IPizza):Promise<any>{
+  getPizzaSingola(id:number):Promise<IPizza>{
+    return fetch(this.apiUrl+'/'+id).then(response => response.json());
+  }
+
+  addPizza(pizza:IPizza):Promise<IPizza>{
     return fetch(this.apiUrl,{
-      method:'post',
-      headers: {'Content-Type': 'application/json'},
+      method:'post',//gli ndico che voglio creare
+      headers: {'Content-Type': 'application/json'},//specifico il formato(per la compatibilità)
       body: JSON.stringify(pizza)
-    }).then(response => response.json())
+    }).then(response => response.json());
+  }
+
+  updatePizza(pizza:IPizza){
+    return fetch(this.apiUrl+'/'+pizza.id,{
+      method:'PUT',//gli ndico che voglio aggiornare
+      headers: {'Content-Type': 'application/json'},//specifico il formato(per la compatibilità)
+      body: JSON.stringify(pizza)
+    }).then(response => response.json());
+  }
+
+  deletePizza(id:number = 0){
+    return fetch(this.apiUrl+'/'+id,{
+      method:'DELETE',//indico che voglio eliminare
+    }).then(response => response.json());
   }
 
 }
