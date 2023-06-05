@@ -19,14 +19,15 @@ export class UserInterceptor implements HttpInterceptor {
 
     }
 
+    //la request originale è immutabile, procediamo quindi a clonarla, effettuando modifiche al clone stesso mentre lo creiamo
     const newReq = request.clone({
       headers: request.headers
       .append('Auth','secretId')
-      .append('firma','xyz')
+      .append('firma','xyz')//spiegazione: assegno agli headers del clone, gli stessi headers della richiesta originale, facendo però append di nuovi headers con i rispettivi valori
     })
 
 
-    return next.handle(newReq);
+    return next.handle(newReq);//attenzione, handle gestisce ora il clone della richiesta iniziale(newReq anzichè request)
 
 
   }

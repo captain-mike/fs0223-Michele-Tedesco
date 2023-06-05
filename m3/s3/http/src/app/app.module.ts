@@ -13,12 +13,12 @@ import { UserInterceptor } from './user.interceptor';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule//questo per poter usare l'HttpClient
   ],
   providers: [
-    {
+    {//con questo oggetto attivo a tutti gli effetti l'interceptor
       provide: HTTP_INTERCEPTORS,
-      useClass: UserInterceptor,
+      useClass: UserInterceptor,//la classe dell'interceptor da collegare
       multi:true
     }
   ],

@@ -18,8 +18,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.userSvc.get().subscribe(res => {
-      this.userArr = res;
+    this.userSvc.get().subscribe(res => {//mi iscrivo all'observable
+      this.userArr = res;//appena ricevuti i dati vado a popolare l'array userArr per mostrare i dati in arrivo
     })
 
   }
