@@ -1,4 +1,5 @@
 <div class="container">
+  <!--ngSubmit scatena update() ad ogni submit del form-->
   <form (ngSubmit)="submit(f)" #f="ngForm">
     <div class="form-group col-12">
       <input type="text" #username="ngModel" required class="form-control" ngModel name="username" placeholder="Username">
@@ -39,6 +40,7 @@
 
       <div class="form-group">
         <div class="form-check">
+          <!--in quest'area stiamo semplicemente generando un input radio per ogni genere nell'array generi-->
           <div *ngFor="let genere of generi">
             <label class="form-check-label" [for]="genere">{{genere}}</label>
             <input
@@ -57,7 +59,10 @@
         </div>
       </div>
     </div>
+
     <button type="button" (click)="setDati()" class="btn btn-danger">Fill</button>
+
+    <!--f si riferisce al form (riga 3)-->
     <button [disabled]="f.invalid" class="btn btn-success">Invia</button>
   </form>
 </div>

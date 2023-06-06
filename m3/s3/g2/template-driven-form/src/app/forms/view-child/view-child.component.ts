@@ -8,13 +8,20 @@ import { NgForm } from '@angular/forms';
 })
 export class ViewChildComponent {
 
-  @ViewChild('f',{static:true}) form!:NgForm;
+  generi:string[] = ['uomo','donna','altro'];//dati che uso solo per costruire una parte del form con un ngFor nell'html
 
-  generi:string[] = ['uomo','donna','altro'];//dati che uso solo per costruire una parte del form
+
+
+  @ViewChild('f',{static:true}) form!:NgForm; //cerco l'elemento identificato da #f grazie al decoratore viewChild e lo inserisco nella variabile form
+
 
 
   setDati(){
 
+    //questo metodo, se lanciato andrà a valorizzare i campi del form
+
+    //L'oggetto deve ricalcare la struttura del form
+    //i campi che hanno la direttiva ngModel hanno anche un name, questi name compongono l'oggetto sottostante
     let datiDaInserire = {
       authData:{
         email:'miamail@esempio.it',
@@ -31,12 +38,14 @@ export class ViewChildComponent {
     console.log(form);
     console.log(form.form.value);//qui ci sono tutti i valori sotto forma di oggetto unico
 
-    this.form.reset();
+    this.form.reset();//resetto tutti i campi che hanno la direttiva ngModel
   }
 
   ngOnInit(){
 
+
     this.form.statusChanges?.subscribe(status => {
+      //esegue una operazione ad ogni cambio di stato del form
 
       console.log(status);//valid | invalid
 
