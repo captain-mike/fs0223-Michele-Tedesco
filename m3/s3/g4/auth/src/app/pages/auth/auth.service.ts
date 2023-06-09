@@ -41,6 +41,7 @@ export class AuthService {
 
       const expDate = this.jwtHelper
       .getTokenExpirationDate(data.accessToken) as Date;
+      this.autoLogout(expDate)
     }),
       catchError(this.errors)
     )
